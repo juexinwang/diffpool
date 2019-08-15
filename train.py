@@ -594,6 +594,31 @@ def arg_parse():
     parser.add_argument('--name-suffix', dest='name_suffix',
             help='suffix added to the output filename')
 
+#     parser.set_defaults(datadir='data',
+#                         logdir='log',
+#                         dataset='syn1v2',
+#                         max_nodes=1000,
+#                         cuda='1',
+#                         feature_type='default',
+#                         lr=0.001,
+#                         clip=2.0,
+#                         batch_size=20,
+#                         num_epochs=1000,
+#                         train_ratio=0.8,
+#                         test_ratio=0.1,
+#                         num_workers=1,
+#                         input_dim=10,
+#                         hidden_dim=20,
+#                         output_dim=20,
+#                         num_classes=2,
+#                         num_gc_layers=3,
+#                         dropout=0.0,
+#                         method='base',
+#                         name_suffix='',
+#                         assign_ratio=0.1,
+#                         num_pool=1
+#                        )
+
     parser.set_defaults(datadir='data',
                         logdir='log',
                         dataset='syn1v2',
@@ -608,14 +633,15 @@ def arg_parse():
                         test_ratio=0.1,
                         num_workers=1,
                         input_dim=10,
-                        hidden_dim=20,
-                        output_dim=20,
+                        hidden_dim=30,
+                        output_dim=30,
                         num_classes=2,
                         num_gc_layers=3,
                         dropout=0.0,
-                        method='base',
+                        method='soft-assign',
                         name_suffix='',
                         assign_ratio=0.1,
+                        bmname='dream1',
                         num_pool=1
                        )
     return parser.parse_args()
